@@ -24,6 +24,8 @@ subprojects {
 
     detekt {
         config.from(rootProject.files("config/detekt/detekt.yml"))
+        buildUponDefaultConfig = true
+        autoCorrect = true
     }
 
     dependencies {
