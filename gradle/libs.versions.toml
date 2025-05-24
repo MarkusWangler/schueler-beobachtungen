@@ -13,9 +13,13 @@ detekt = "1.23.8"
 espresso_core = "3.6.1"
 junit = "4.13.2"
 kotlin = "2.1.20"
+hilt = "2.48"
+sqlcipher = "4.5.5"
+excalidraw = "0.18.0"
 min_sdk_version = "23"
 target_sdk_version = "34"
 benmanesversion = "0.52.0"
+
 
 [libraries]
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -35,11 +39,21 @@ compose_ui_tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose_ui_test_junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 compose_ui_test_manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 espresso_core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso.core" }
 agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 kgp = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
+# Security
+sqlcipher-android = { group = "net.zetetic", name = "android-database-sqlcipher", version.ref = "sqlcipher" }
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version = "1.1.0-alpha06" }
+
+# SVG & Drawing
+androidsvg = { group = "com.caverock", name = "androidsvg", version = "1.4" }
+
 [plugins]
+android-application = { id = "com.android.application", version = "8.7.3" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 versions = { id = "com.github.ben-manes.versions", version.ref = "benmanesversion" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
